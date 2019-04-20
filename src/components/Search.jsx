@@ -13,7 +13,7 @@ export default class Search extends Component {
                         <div className='input-group'>
                             <input onChange={handleInputChange} value={value} type="search" className="form-control" id="search" placeholder="potato, onion, tomato..." />
                             <div className="input-group-append">
-                                <button type='submit' className='input-group-text bg-primary text-white'><i className='fas fa-search'></i></button>
+                                <button type='submit' className='input-group-text bg-success text-white'><i className='fas fa-search'></i></button>
                             </div>
                         </div>
 

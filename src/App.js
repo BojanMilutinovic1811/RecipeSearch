@@ -25,11 +25,9 @@ class App extends Component {
     e.preventDefault()
     const base = this.state.urlbase
     const ingredient = this.state.searchInput
-    console.log(base + '&q=' + ingredient);
     this.setState({ url: base + '&q=' + ingredient, searchInput: '' }, () => {
       this.getRecipes()
       this.displayPage()
-      console.log(this.state);
     })
   }
 
@@ -45,7 +43,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getRecipes()
+    // this.getRecipes()
   }
 
   handleIndex = (index) => {
@@ -62,7 +60,6 @@ class App extends Component {
   }
 
   displayPage() {
-    console.log('displaying page');
     switch (this.state.page_index) {
       case 0:
         return <List handleInputChange={this.handleInputChange} handleDetails={this.handleDetails} recipes={this.state.recipes} handleInputSubmit={this.handleInputSubmit} value={this.state.searchInput} error={this.state.error} />

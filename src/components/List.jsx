@@ -12,7 +12,7 @@ export default class List extends Component {
                 <h3>Recipes List</h3>
                 <div className="row">
 
-                    {error ? <h3>{error}</h3> :
+                    {recipes.length === 0 ? <h3>{error}</h3> :
                         recipes.map(singleRecipe => {
                             return <Recipe handleDetails={handleDetails} key={singleRecipe.recipe_id} recipe={singleRecipe} />
                         })

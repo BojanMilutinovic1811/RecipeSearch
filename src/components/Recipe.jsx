@@ -5,9 +5,9 @@ export default class Recipe extends Component {
         const { image_url, publisher, title, recipe_id, source_url } = this.props.recipe
         const { handleDetails } = this.props
         return (
-            <div className='col-10 col-md-3 col-lg-4'>
+            <div className='col-10 my-2 col-md-3 col-lg-4'>
                 <div className="card">
-                    <img className="card-img-top" src={image_url} alt="Dish" />
+                    <img className="card-img-top" src={image_url} style={{ maxHeight: '13rem' }} alt="Dish" />
                     <div className="card-body">
                         <h5 className="card-title">{title}</h5>
                         <p className="card-text">Provided By: {publisher}</p>
